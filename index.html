@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SportX | Discover Your Inner Athlete</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: #080b0c;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #c6ff00;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #c6ff00;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      min-height: 600px;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.9), rgba(0,0,0,0.3)),
+        url("https://images.unsplash.com/photo-1538805060514-97d9cc17730c");
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+      padding: 8%;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: 65px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 span {
+      color: #c6ff00;
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #c6ff00;
+      color: black;
+      padding: 15px 35px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background: white;
+    }
+
+    /* FEATURES */
+    .features {
+      background: #080b0c;
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 40px 8%;
+      gap: 30px;
+    }
+
+    .feature h3 {
+      color: #c6ff00;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: #bbb;
+    }
+
+    /* CATEGORIES */
+    .categories {
+      padding: 70px 8%;
+    }
+
+    .categories h2 {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    .categories h2 span {
+      color: #9cc900;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      height: 300px;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 25px;
+      color: white;
+      background: linear-gradient(transparent, black);
+    }
+
+    .card-content h3 {
+      font-size: 22px;
+    }
+
+    /* CALL TO ACTION */
+    .cta {
+      background: #c6ff00;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .cta h2 {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .cta .btn {
+      background: black;
+      color: white;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #080b0c;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    /* MOBILE DESIGN */
+    @media (max-width: 768px) {
+
+      nav ul {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+
+      .cta h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">SPORT<span>X</span></div>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#categories">Sports</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+
+      <h1>
+        Discover Your <span>Inner Athlete</span>
+      </h1>
+
+      <p>
+        High-performance sportswear and equipment designed
+        to help you train harder, move faster, and achieve
+        your goals.
+      </p>
+
+      <a href="#categories" class="btn">EXPLORE SPORTS →</a>
+
+    </div>
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="features">
+
+    <div class="feature">
+      <h3>🚚 FREE SHIPPING</h3>
+      <p>Free delivery on selected orders.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🏆 PREMIUM QUALITY</h3>
+      <p>Sports equipment built for performance.</p>
+    </div>
+
+    <div class="feature">
+      <h3>↩ EASY RETURNS</h3>
+      <p>Simple and stress-free returns.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🔒 SECURE PAYMENT</h3>
+      <p>Your payment information is protected.</p>
+    </div>
+
+  </section>
+
+
+  <!-- SPORTS CATEGORIES -->
+  <section class="categories" id="categories">
+
+    <h2>POPULAR <span>SPORTS</span></h2>
+
+    <div class="category-grid">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e">
+        <div class="card-content">
+          <h3>GYM & FITNESS 💪</h3>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5">
+        <div class="card-content">
+          <h3>RUNNING 🏃</h3>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf">
+        <div class="card-content">
+          <h3>BASKETBALL 🏀</h3>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55">
+        <div class="card-content">
+          <h3>FOOTBALL ⚽</h3>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1530137073520-91f1c84a8b2b">
+        <div class="card-content">
+          <h3>CYCLING 🚴</h3>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306">
+        <div class="card-content">
+          <h3>OUTDOOR 🏔️</h3>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CALL TO ACTION -->
+  <section class="cta">
+
+    <h2>READY TO START YOUR JOURNEY?</h2>
+
+    <p>
+      Discover sports equipment and training products
+      designed for champions.
+    </p>
+
+    <a href="#" class="btn">SHOP NOW</a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <h2>SPORT<span style="color:#c6ff00;">X</span></h2>
+
+    <br>
+
+    <p>Train Hard. Play Hard. Become Your Best.</p>
+
+    <br>
+
+    <p>© 2026 SPORTX. All Rights Reserved.</p>
+
+  </footer>
+
+</body>
+</html>
